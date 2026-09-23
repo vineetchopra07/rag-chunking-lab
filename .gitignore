@@ -1,3 +1,103 @@
+# ---- Secrets ----
 .env
+.env.*
+!.env.example
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+.virtualenv/
+# Guard against a venv created inside a package dir (as rag/ once was)
+*/bin/activate
+*/pyvenv.cfg
+pyvenv.cfg
+
+# ---- Python bytecode / build ----
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+sdist/
+wheels/
+*.egg-info/
+*.egg
+.installed.cfg
+MANIFEST
+
+# ---- Test / coverage / type checkers ----
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+
+# ---- Notebooks ----
+.ipynb_checkpoints/
+
+# ---- ML / RAG artifacts ----
+# Model + embedding caches (can be many GB)
+.cache/
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Vector store persistence
+chroma/
+chroma_db/
+.chroma/
+*.chromadb
+qdrant_storage/
+storage/
+*.faiss
+*.index
+*.usearch
+
+# Cached embeddings / eval output
+embeddings/
+*.npy
+*.npz
+eval_results/
+outputs/
+runs/
+
+# ---- Editors / IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.ropeproject
+
+# ---- OS ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ---- Logs ----
+*.log
+logs/
